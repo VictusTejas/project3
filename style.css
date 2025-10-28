@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ae93e4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.cube-top {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #6b4c9a;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.cube-bottom {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #9a7ed0;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.scrollable-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scrollable-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scrollable-area::-webkit-scrollbar-thumb {
+    background: #9a7ed0;
+    border-radius: 10px;
+}
+
+.scrollable-area::-webkit-scrollbar-thumb:hover {
+    background: #6b4c9a;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6b4c9a;
+    outline: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #6b4c9a;
+}
+
+.forgot-password {
+    color: #6b4c9a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #6b4c9a;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #5a3f85;
+}
+
+.btn-google {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-google svg {
+    margin-right: 10px;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+.switch-form a {
+    color: #6b4c9a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.image-container {
+    flex: 1;
+    background-color: #9a7ed0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .form-container {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .image-container {
+        display: none;
+    }
+}

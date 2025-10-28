@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculation</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <p>Enter your details below to calculate your BMI.</p>
+        
+        <form id="bmiForm">
+            <div class="input-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter your height" required>
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+            </div>
+
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity" required>
+                    <option value="">Select Activity Level</option>
+                    <option value="sedentary">Sedentary (Little to no exercise)</option>
+                    <option value="light">Lightly active (1-3 days/week)</option>
+                    <option value="moderate">Moderately active (3-5 days/week)</option>
+                    <option value="very">Very active (6-7 days/week)</option>
+                    <option value="super">Super active (Athlete level)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Calculate BMI</button>
+        </form>
+
+        <div id="result" class="result-box hidden">
+            <h2>Your BMI Result</h2>
+            <p id="bmiValue"></p>
+            <p id="bmiFeedback"></p>
+        </div>
+
+        <button id="backButton" class="btn back-btn">Back to Dashboard</button>
+    </div>
+
+    <script src="bmi.js"></script>
+</body>
+</html>

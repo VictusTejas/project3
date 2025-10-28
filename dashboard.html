@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="cube-top"></div>
+                    <div class="cube-bottom"></div>
+                </div>
+                <div class="logo-text">TheCubeFactory</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="dashboard-header">
+                <h1>Health Dashboard</h1>
+                <div class="user-profile">
+                    <span class="notification-icon"><i class="fas fa-bell"></i></span>
+                    <div class="avatar">AB</div>
+                </div>
+            </header>
+
+            <div class="dashboard-title">
+                <h2>Welcome back, User</h2>
+                <p>Here are your health monitoring options</p>
+            </div>
+
+            <div class="cards-container">
+                <!-- Posture Detection Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Posture Detection</h3>
+                        <p>Analyze and improve your posture with AI-powered detection</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">87%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">24</span>
+                                <span class="stat-label">Sessions</span>
+                            </div>
+                        </div>
+                        <button class="card-button" id="start-detection">Start Detection</button> <!-- ✅ Fixed Button -->
+                    </div>
+                </div>
+
+                <!-- Diet Plan Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Diet Plan</h3>
+                        <p>Personalized nutrition plans based on your health goals</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">1800</span>
+                                <span class="stat-label">Calories</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">7</span>
+                                <span class="stat-label">Days</span>
+                            </div>
+                        </div>
+                        <button class="card-button" id="diet-plan">View Plan</button>
+                    </div>
+                </div>
+
+                <!-- Calculate BMI Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Calculate BMI</h3>
+                        <p>Track your Body Mass Index and health metrics</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">22.5</span>
+                                <span class="stat-label">Current BMI</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Normal</span>
+                                <span class="stat-label">Status</span>
+                            </div>
+                        </div>
+                        <button class="card-button" id="bmi">Calculate Now</button>
+                    </div>
+                </div>
+
+                <!-- Rep Counter Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rep Counter</h3>
+                        <p>Automatically count your exercise repetitions with AI</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">156</span>
+                                <span class="stat-label">Today's Reps</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Exercises</span>
+                            </div>
+                        </div>
+                        <button class="card-button" id="rep-counter">Start Counting</button>
+                    </div>
+                </div>
+                
+                <!-- Workout Plan Card - FIXED STRUCTURE -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Workout plan</h3>
+                        <p>Personalized nutrition plans based on your health goals</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">1800</span>
+                                <span class="stat-label">Calories</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">7</span>
+                                <span class="stat-label">Days</span>
+                            </div>
+                        </div>
+                        <button class="card-button" id="workout-plan">View Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-walking"></i></div>
+                        <div class="activity-details">
+                            <h4>Posture Analysis Completed</h4>
+                            <p>Your posture score: 85/100</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="activity-details">
+                            <h4>Diet Plan Updated</h4>
+                            <p>New meal recommendations available</p>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="activity-details">
+                            <h4>BMI Calculated</h4>
+                            <p>Your BMI is in the normal range</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- 👇 Inside <script> before dashboard.js -->
+    <script>
+        const token = localStorage.getItem('token');
+    
+        function updateActivityList(activityType, description, iconClass) {
+            const activityList = document.getElementById("activityList");
+    
+            const activityItem = document.createElement("div");
+            activityItem.className = "activity-item";
+            activityItem.innerHTML = `
+                <div class="activity-icon"><i class="${iconClass}"></i></div>
+                <div class="activity-details">
+                    <h4>${activityType}</h4>
+                    <p>${description}</p>
+                    <span class="activity-time">Just now</span>
+                </div>
+            `;
+    
+            // Add to top
+            activityList.insertBefore(activityItem, activityList.firstChild);
+    
+            // Only keep latest 3
+            while (activityList.children.length > 3) {
+                activityList.removeChild(activityList.lastChild);
+            }
+        }
+    
+        async function logActivity(activity, description, iconClass) {
+            try {
+                await fetch('http://localhost:5000/log-activity', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ activity })
+                });
+    
+                updateActivityList(activity, description, iconClass);
+            } catch (err) {
+                console.error('Activity logging failed:', err);
+            }
+        }
+    
+        document.getElementById("start-detection").addEventListener("click", function () {
+            logActivity("Posture Detection Started", "Your posture analysis has started", "fas fa-walking");
+            window.location.href = "posture-detection.html";
+        });
+    
+        document.getElementById("diet-plan").addEventListener("click", function () {
+            logActivity("Diet Plan Viewed", "New meal recommendations loaded", "fas fa-utensils");
+            window.location.href = "dietplan.html";
+        });
+    
+        document.getElementById("bmi").addEventListener("click", function () {
+            logActivity("BMI Calculator Accessed", "BMI calculator launched", "fas fa-calculator");
+            window.location.href = "bmi.html";
+        });
+    
+        document.getElementById("rep-counter").addEventListener("click", function () {
+            logActivity("Rep Counter Accessed", "Repetition tracking activated", "fas fa-dumbbell");
+            window.location.href = "rep-counter.html";
+        });
+    
+        document.getElementById("workout-plan").addEventListener("click", function () {
+            logActivity("Workout Plan Viewed", "Your personalized workout plan is ready", "fas fa-dumbbell");
+            window.location.href = "workout.html";
+        });
+    </script>
+    
+    <!-- 👇 Keep this after the above script -->
+    <script src="dashboard.js"></script>
+    
+
+</body>
+</html>

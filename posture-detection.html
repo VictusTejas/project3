@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Detection</title>
+    <link rel="stylesheet" href="posture-detection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="cube-top"></div>
+                    <div class="cube-bottom"></div>
+                </div>
+                <div class="logo-text">AI FITNESS COACH</div>
+            </div>
+            <h1>Posture Detection</h1>
+        </div>
+        
+        <div class="content">
+            <div class="video-container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas"></canvas>
+                <div class="video-overlay">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="feedback-container">
+                    <div id="feedback" class="feedback">Click "Analyze Posture" to get feedback.</div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="analyze-button" class="btn btn-primary">
+                        <i class="fas fa-camera"></i> Analyze Posture
+                    </button>
+                    <button id="back-button" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="posture-detection.js"></script>
+</body>
+</html>

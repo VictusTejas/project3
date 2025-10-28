@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Diet Plan</title>
+    <link rel="stylesheet" href="dietplan.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI-Powered Personalized Diet Plan</h1>
+
+        <!-- Diet Plan Form -->
+        <div class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="dietPlanForm">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+
+                <label for="goal">Diet Goal:</label>
+                <select id="goal">
+                    <option value="Bulking">Bulking</option>
+                    <option value="Lean Bulking">Lean Bulking</option>
+                    <option value="Cutting">Cutting</option>
+                    <option value="Keto">Keto</option>
+                </select>
+
+                <label for="dietPreference">Dietary Preference:</label>
+                <select id="dietPreference">
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Eggetarian">Eggetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                </select>
+
+                <label for="supplements">Supplements:</label>
+                <select id="supplements" multiple>
+                    <option value="Protein">Protein</option>
+                    <option value="BCAA">BCAA</option>
+                    <option value="Creatine">Creatine</option>
+                </select>
+
+                <button type="button" id="generateDietPlan">Generate Diet Plan</button>
+            </form>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <h2>Your AI Diet Plan</h2>
+            <div id="dietPlanOutput">⏳ Please wait while we generate your plan...</div>
+            <button id="downloadPlan" style="display: none;">Download as PDF</button>
+            <button id="backButton">Back</button>
+        </div>
+
+    </div>
+
+    <script src="diet-plan.js"></script>
+</body>
+</html>

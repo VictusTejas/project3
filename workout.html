@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plan</title>
+    <link rel="stylesheet" href="workout-plan.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Workout Plan Form -->
+        <div class="form-section">
+            <h2>Generate Your Workout Plan</h2>
+            <label for="fitnessLevel">Fitness Level:</label>
+            <select id="fitnessLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <label for="goal">Workout Goal:</label>
+            <select id="goal">
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Fat Loss">Fat Loss</option>
+                <option value="Endurance">Endurance</option>
+                <option value="Strength Training">Strength Training</option>
+            </select>
+
+            <label for="trainingDays">Training Days per Week:</label>
+            <input type="number" id="trainingDays" min="1" max="7">
+
+            <label for="equipment">Available Equipment:</label>
+            <input type="text" id="equipment" placeholder="e.g., Dumbbells, Resistance Bands, Barbell">
+
+            <label for="preferredExercises">Preferred Exercises (Optional):</label>
+            <input type="text" id="preferredExercises" placeholder="e.g., Squats, Bench Press">
+
+            <button id="generateWorkoutPlan">Get Plan</button>
+        </div>
+
+        <!-- Workout Plan Output -->
+        <div class="output-section" style="display: none;">
+            <h2>Your Personalized Workout Plan</h2>
+            <div id="workoutPlanOutput"></div>
+            <button id="downloadPlan">Download as PDF</button>
+            <button id="backButton">Back</button>
+        </div>
+    </div>
+
+    <script src="workout-plan.js"></script>
+</body>
+</html>

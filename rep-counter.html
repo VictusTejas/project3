@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rep Counter | AI Workout Coach</title>
+    <link rel="stylesheet" href="rep-counter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rep Counter</h1>
+        <div class="camera-container">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="overlay"></canvas>
+            <div class="counter-box">
+                <p>Reps: <span id="repCount">0</span></p>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="resetButton">Reset</button>
+            <button id="backButton">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+    <script src="rep-counter.js"></script>
+</body>
+</html>
